@@ -1,4 +1,5 @@
 # my global config
+# 官方配置文件，定义主要参数为环境变量，方便使用envsubst进行环境变量的变更。
 global:
   scrape_interval: ${SCRAPE_INTERVAL}s # Set the scrape interval to every ${SCRAPE_INTERVAL} seconds. Default is every 1 minute.
   evaluation_interval: ${EVALUATION_INTERVAL}s # Evaluate rules every ${EVALUATION_INTERVAL} seconds. The default is every 1 minute.
