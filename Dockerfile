@@ -30,7 +30,7 @@ RUN useradd -m -s /bin/false prometheus && \
 WORKDIR /home/prometheus
 
 # 下载并安装Prometheus
-RUN wget https://hub.yzuu.cf/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz && \
+RUN wget https://github.com/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz && \
     tar -xvzf prometheus-2.49.1.linux-amd64.tar.gz && \
     mv prometheus-2.49.1.linux-amd64/* /usr/local/prometheus && \
     cd /usr/local/prometheus && \
