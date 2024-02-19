@@ -45,7 +45,7 @@ COPY prometheus.yml /home/prometheus/
 # 赋予文件权限
 RUN chmod 777 /home/prometheus/prometheus.yml
 
-# 配置默认环境变,命令无效
+# 配置默认环境变量,命令无效
 #RUN ["bash", "-c", "envsubst < /home/prometheus/prometheus.yml > /etc/prometheus/prometheus.yml"]
 #RUN envsubst < /home/prometheus/prometheus.yml > /etc/prometheus/prometheus.yml
 
