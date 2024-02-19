@@ -1,0 +1,25 @@
+name: Docker Image CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build and tag Docker image
+      run: |
+        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+    # 如果你需要在pull_request事件下仅构建而不推送镜像，可以移除上面push步骤的if条件，并为pull_request事件添加相应的构建逻辑
+    # - name: Build Docker image for Pull Request (No push)
+    #   if: github.event_name == 'pull_request'
+    #   run: |
+    #     docker build . --file Dockerfile --tag pr-${{ github.event.number }}-${{ github.sha }}
