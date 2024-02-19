@@ -13,3 +13,4 @@ ExecStart=/usr/local/bin/prometheus
     --web.console.libraries=/etc/prometheus/console_libraries
 [Install]
 WantedBy=multi-user.target
+# 此方法作废
