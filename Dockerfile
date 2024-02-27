@@ -1,7 +1,7 @@
 # 使用官方的 Ubuntu 最新长期支持版本作为基础镜像
 FROM ubuntu:latest
 
-# 环境变量已通过envsubst设置
+# 环境变量已通过envsubst设置,设置默认环境变量，如果用户在启动容器时没有指定环境变量，则下方是默认值。
 ENV SCRAPE_INTERVAL=15
 ENV EVALUATION_INTERVAL=15
 ENV PROMETHEUS_HOST=localhost
